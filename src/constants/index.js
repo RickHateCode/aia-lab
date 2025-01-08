@@ -278,7 +278,7 @@ export { Hero }
 const a_propos =  {
   history: "AIA LAB est une entreprise créative, spécialisée dans la conception numeriques,  design graphique, la communication visuelle, la communication digitale, le marketing et la stratégie de marque.",
   expertise: "AIALAB adopte une approche collaborative, travaillant en étroite collaboration avec ses clients pour comprendre leurs besoins et objectifs. Grâce à une équipe d'experts en design, marketing et technologie, AIALAB s'engage à fournir des solutions personnalisées qui se démarquent dans un environnement concurrentiel..",
-  history_image : "/images/B.jpg",
+  history_image : "./images/B.jpg",
   more: " Notre mission principale est de fournir des solutions créatives et efficaces pour répondre aux besoins de conception graphique de nos clients."
 }
 export { a_propos };

@@ -5,10 +5,10 @@ const HeroSection = ()=> {
     return(
     <div id="Acceuil">
        <div className=" w-full  relative md:relative  mx-auto" >
-            <div ><img src="/images/bgNoirT.jpg" height = {500} alt="" className=""/></div>'
+            <div ><img src="./images/bgNoirT.jpg" height = {500} alt="" className=""/></div>'
             <div className="absolute inset-0  bg-black opacity-85 mx-auto"/>
             <div className="absolute inset-0 flex items-center justify-center ">
-            <img src="/images/aiapng.png"  alt="" className=" w-full max-w-56 sm:max-w-72 md:max-w-80 lg:max-w-[24rem] xl:max-w-[30rem]"/>
+            <img src="./images/aiapng.png"  alt="" className=" w-full max-w-56 sm:max-w-72 md:max-w-80 lg:max-w-[24rem] xl:max-w-[30rem]"/>
             </div>
         </div>
         <div className=" flex mt-0 md:mt-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -33,7 +33,7 @@ const HeroSection = ()=> {
           </div>
           <div className="relative">
             <img
-              src="/images/Keyboard.jpg"
+              src="./images/Keyboard.jpg"
               alt="Team collaboration"
               className="rounded-2xl shadow-2xl w-full object-cover"
             />
