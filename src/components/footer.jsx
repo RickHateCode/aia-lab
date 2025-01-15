@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4  items-center justify-center mx-auto">
-            <img src="./images/embleme.svg" alt=""  className='max-w-44 md:max-w-44'/>
+            <img src="/aia-lab/images/embleme.svg" alt=""  className='max-w-44 md:max-w-44'/>
             <p className="text-gray-400">
               BEYOND THE POSSIBLE
             </p>

@@ -20,7 +20,7 @@ const teamMembers= [
     id: 1,
     name: "Mbassi Rick",
     role: "Createur web & mobile / ux designer",
-    image: "/images/b3.jpg",
+    image: "/aia-lab/images/b3.jpg",
     // bio: "Leading creative strategies with over 10 years of experience in brand development.",
     social: {
       twitter: "#",
@@ -32,7 +32,7 @@ const teamMembers= [
     id: 2,
     name: "Hugues Abena",
     role: "Manager General / designer graphique",
-    image: "/images/G.jpg",
+    image: "/aia-lab/images/G.jpg",
     // bio: "Passionate about creating innovative solutions and mentoring future tech leaders.",
     social: {
       twitter: "#",
@@ -44,7 +44,7 @@ const teamMembers= [
     id: 3,
     name: "Patrick",
     role: "createur web / designer graphique",
-    image: "/images/P-one.jpg",
+    image: "/aia-lab/images/P-one.jpg",
     // bio: "Crafting compelling narratives that connect brands with their audience.",
     social: {
       twitter: "#",
@@ -56,7 +56,7 @@ const teamMembers= [
     id: 4,
     name: "Mukwade Jacques",
     role: "chairman",
-    image: "/images/J-two.jpg",
+    image: "/aia-lab/images/J-two.jpg",
     // bio: "Creating intuitive and delightful user experiences through research-driven design.",
     social: {
       twitter: "#",
@@ -68,7 +68,7 @@ const teamMembers= [
     id: 5,
     name: "Mol rodrigue",
     role: "monteur video / community manager",
-    image: "/images/A.jpg",
+    image: "/aia-lab/images/A.jpg",
     // bio: "Creating intuitive and delightful user experiences through research-driven design.",
     social: {
       twitter: "#",
@@ -80,7 +80,7 @@ const teamMembers= [
     id: 6,
     name: "Gabin",
     role: "commercial representative / RH",
-    image: "/images/Ga.jpg",
+    image: "/aia-lab/images/Ga.jpg",
     // bio: "Leading creative strategies with over 10 years of experience in brand development.",
     social: {
       twitter: "#",
