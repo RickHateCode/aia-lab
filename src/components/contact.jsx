@@ -1,7 +1,34 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { init, send } from 'emailjs-com';
+import { useState } from 'react';
+
+init('z39wvqhGhvNDrcrmS'); // Remplacez par votre User ID d'EmailJS
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+});
+
+const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+};
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+
+    send('service_f82zi4b', 'template_nb49nmv', formData)
+        .then((response) => {
+            console.log('Email envoyé avec succès!', response.status, response.text);
+            // Réinitialiser le formulaire ou afficher un message de succès
+        })
+        .catch((err) => {
+            console.error('Échec de l\'envoi de l\'email', err);
+        });
+};
   return (
     <section id="contact" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +79,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Nom
@@ -61,6 +88,10 @@ const Contact = () => {
                 type="text"
                 id="name"
                 className="px-10 mt-1 block w-full rounded-md border-gray-500 shadow-sm h-10 focus:border-white focus:ring-white"
+                name='name'
+                value={formData.name}
+                onChange={handleChange}
+                required
               />
             </div>
 
@@ -72,6 +103,10 @@ const Contact = () => {
                 type="email"
                 id="email"
                 className="px-10 h-10 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#08c1dc] focus:ring-[#08c1dc]"
+                name='email'
+                value={formData.email}
+                onChange={handleChange}
+                required
               />
             </div>
 
@@ -83,6 +118,10 @@ const Contact = () => {
                 id="message"
                 rows={4}
                 className="px-10 mt-1 block w-full rounded-md border-gray-500 shadow-sm focus:border-[#08c1dc] focus:ring-[#08c1dc]"
+                name='message'
+                value={formData.message}
+                onChange={handleChange}
+                required
               ></textarea>
             </div>
 

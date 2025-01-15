@@ -12,6 +12,7 @@ import './App.css'
 import Footer from './components/footer';
 import Valeurs from './components/valeurs';
 import { Timeline } from './components/TimeLine';
+import TeamSection from './components/Team-section';
 
 function App() {
   const navigation = [
@@ -30,6 +31,7 @@ function App() {
                <button className="bg-[#08c1dc] cursor-pointer items-center w-60"> <p className="font-bold text-white">En savoir plus...</p></button>
             </div> 
        </About>
+       <TeamSection/>
        <div className='mt-0 md:flex flex-col xl:justify-center mx-auto md:flex-row gap-x-10 lg:gap-x-8 xl:gap-x-20 space-y-0'>
          <Timeline/>
          <Valeurs/>

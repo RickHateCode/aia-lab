@@ -16,7 +16,7 @@ const Services = () => {
     {
       icon: Palette,
       title: ' Design graphique',
-      description: ' nous proposons des designs graphiques pour des supports de communicationcomme les brochures, les flyers, les affiches, les cartes de visite, les présentations',
+      description: ' nous proposons des designs graphiques pour des supports de communication comme les brochures, les flyers, les affiches, les cartes de visite, les présentations',
     },
     {
       icon: Palette,
@@ -58,7 +58,7 @@ const Services = () => {
                 <service.icon className="w-8 h-8 text-[#08c1dc] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-              <p className="text-gray-600 text-left ">{service.description}</p>
+              <p className="text-gray-600 text-justify px-0">{service.description}</p>
             </div>
           ))}
         </div>

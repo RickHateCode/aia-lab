@@ -1,7 +1,7 @@
 const EntrySection = ({text, children, style})=> {
     return(
         <div className="bg-black w-full">
-               <div className=" bg-cover h-[25vh] md:h-[30vh] lg:h-[45vh] xl:h-[55vh] 2xl:h-[70vh] relative" style={{ backgroundImage: 'url(/images/B.jpg)' }}>
+               <div className=" bg-cover h-[25vh] md:h-[30vh] lg:h-[45vh] xl:h-[55vh] 2xl:h-[70vh] relative" style={{ backgroundImage: 'url(/images/us2.jpg)' }}>
                    <div className="absolute inset-0  bg-black opacity-70 mx-auto " />
                    <div className="absolute inset-0 flex items-center justify-center ">
                       <img src="./images/embleme.svg" alt=""  className='max-w-40 md:max-w-60'/>
