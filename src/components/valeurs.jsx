@@ -16,7 +16,7 @@ const features = [
   {
     name: 'Relationnel',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      "développement des stratégies de communication personnalisées qui favorisent l'engagement, encouragent le dialogue et créent une véritable communauté autour de nous",
     icon: UserGroupIcon,
   },
   {

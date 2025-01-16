@@ -4,13 +4,19 @@ import { init, send } from 'emailjs-com';
 import { useState } from 'react';
 
 init('z39wvqhGhvNDrcrmS'); // Remplacez par votre User ID d'EmailJS
-
+//template_klmajnu
+//service_orfr5w9
+//z39wvqhGhvNDrcrmS
+  
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
 });
+
+const [loading, setLoading] = useState(false);
+
 
 const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,14 +25,30 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true)
 
-    send('service_f82zi4b', 'template_nb49nmv', formData)
+    send('service_orfr5w9', 'template_klmajnu', {
+          from_name: formData.name,
+          to_name: "AIA-LAB",
+          from_email: formData.email,
+          to_email: 'contactus@aialabcm.com',
+          message: formData.message
+       }, 'z39wvqhGhvNDrcrmS')
         .then((response) => {
+            setLoading(false)
+            alert("merci,  je vous reviens aussi vite que possible")
+            setFormData({
+              name: '',
+              email: '',
+              message: '',
+            })
             console.log('Email envoyé avec succès!', response.status, response.text);
             // Réinitialiser le formulaire ou afficher un message de succès
         })
         .catch((err) => {
-            console.error('Échec de l\'envoi de l\'email', err);
+          setLoading(false)
+            alert("echec de l'envoie de l'email verifier votre connexion")
+            console.log('Échec de l\'envoi de l\'email', err);
         });
 };
   return (
@@ -87,10 +109,11 @@ const handleSubmit = (e) => {
               <input
                 type="text"
                 id="name"
-                className="px-10 mt-1 block w-full rounded-md border-gray-500 shadow-sm h-10 focus:border-white focus:ring-white"
+                className="px-10 mt-1 block w-full rounded-md border-gray-500 shadow-sm h-10 focus:border-white focus:ring-white placeholder:text-gray-600 placeholder:text-sm"
                 name='name'
                 value={formData.name}
                 onChange={handleChange}
+                placeholder="quelle est votre nom?"
                 required
               />
             </div>
@@ -102,10 +125,11 @@ const handleSubmit = (e) => {
               <input
                 type="email"
                 id="email"
-                className="px-10 h-10 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#08c1dc] focus:ring-[#08c1dc]"
+                className="px-10 h-10 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#08c1dc] focus:ring-[#08c1dc] placeholder:text-gray-600 placeholder:text-sm"
                 name='email'
                 value={formData.email}
                 onChange={handleChange}
+                placeholder="quelle est votre email?"
                 required
               />
             </div>
@@ -117,10 +141,11 @@ const handleSubmit = (e) => {
               <textarea
                 id="message"
                 rows={4}
-                className="px-10 mt-1 block w-full rounded-md border-gray-500 shadow-sm focus:border-[#08c1dc] focus:ring-[#08c1dc]"
+                className="px-10 mt-1 block w-full rounded-md border-gray-500 shadow-sm focus:border-[#08c1dc] focus:ring-[#08c1dc] placeholder:text-gray-600 placeholder:text-sm"
                 name='message'
                 value={formData.message}
                 onChange={handleChange}
+                placeholder="envoyer nous un message" 
                 required
               ></textarea>
             </div>
@@ -129,7 +154,7 @@ const handleSubmit = (e) => {
               type="submit"
               className="w-full bg-[#08c1dc] text-white py-3 px-6 rounded-md hover:bg-blue-400 transition-colors"
             >
-              envoyée le Message
+              {loading? "encours d'envoie..." : "envoyer"}
             </button>
           </form>
         </div>
